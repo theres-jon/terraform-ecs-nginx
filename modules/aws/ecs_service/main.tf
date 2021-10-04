@@ -125,7 +125,7 @@ resource "aws_lb_listener" "ecs_alb_redirect" {
 resource "aws_acm_certificate" "cert" {
   count = var.route53_hosted_zone_domain_name == "" ? 0 : 1
 
-  domain_name       = data.aws_route53_zone.dns_zone[0].name
+  domain_name       = "nginx-ecs-demo-app.${var.route53_hosted_zone_domain_name}"
   validation_method = "DNS"
 
   lifecycle {
