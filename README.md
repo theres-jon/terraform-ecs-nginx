@@ -5,8 +5,10 @@ What will be created is as follows -
 - VPC w/ Internet and NAT Gateways
 - Security Groups
 - Application Load Balancer
-- ECS Task definition and Cluster
+- ECS Task definition and Fargate Cluster
+- CloudWatch Log Group
 - Necessary IAM resources with minimal permissions
+- ACM Certificate if a valid TLD Route53 zone exists
 
 # How the repo is structured
 
